@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: #ff6b9d;
+	--secondary: #c06c84;
+	--accent: #ffa69e;
+	--light: #ffe6f0;
+	--dark: #8b4557;
+	--success: #ff8fab;
+
+	font-family: 'Poppins', 'Segoe UI', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Poppins', 'Segoe UI', sans-serif;
+	background: linear-gradient(
+		135deg,
+		#ff6b9d 0%,
+		#ff8fab 25%,
+		#c06c84 50%,
+		#ffa69e 75%,
+		#ff6b9d 100%
+	);
+	background-size: 400% 400%;
+	animation: gradientShift 15s ease infinite;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+	position: relative;
+	margin: 0;
+}
+
+@keyframes gradientShift {
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+}
+
+#root {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Confetti pieces */
+.confetti-piece {
+	position: fixed;
+	width: 10px;
+	height: 10px;
+	top: -10px;
+	z-index: 9999;
+	animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+	to {
+		transform: translateY(100vh) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* Floating hearts */
+.floating-heart {
+	position: absolute;
+	bottom: -50px;
+	animation: floatUp 7s linear forwards;
+	pointer-events: none;
+}
+
+@keyframes floatUp {
+	to {
+		bottom: 110vh;
+		opacity: 0;
+	}
+}
