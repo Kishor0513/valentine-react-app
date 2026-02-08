@@ -1,4 +1,4 @@
-const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
+const SuccessCard = ({ recipientName, rejectionCount, onShare, onRestart }) => {
 	return (
 		<div className="container">
 			<div className="card success-card">
@@ -6,7 +6,12 @@ const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
 
 				<div className="success-character">
 					<div className="jumping-character">
-						<span className="character-happy">🥰</span>
+						{/* Dudu and Bubu celebrating together */}
+						<div className="celebration-couple">
+							<span className="dudu-happy">🐻💕</span>
+							<span className="heart-center">❤️</span>
+							<span className="bubu-happy">🐰💖</span>
+						</div>
 						<div className="heart-burst">
 							<span>💖</span>
 							<span>💕</span>
@@ -19,8 +24,10 @@ const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
 				</div>
 
 				<h1 className="success-title">
-					<span className="success-line">🎉 YAYYY! 🎉</span>
-					<span className="success-main">You Said YES!</span>
+					<span className="success-line">🎉 YES! FENSHIKA SAID YES! 🎉</span>
+					<span className="success-main">
+						This Valentine's Week is Ours! 💕
+					</span>
 				</h1>
 
 				<div className="success-stats">
@@ -39,12 +46,12 @@ const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
 				</div>
 
 				<p className="success-message">
-					I knew you couldn't resist! 😍
+					Fenshika, you've made this the best Valentine's ever! 😍
 					<br />
 					{rejectionCount > 0 && (
 						<small>
-							After <span>{rejectionCount}</span> failed attempts to say no...
-							😏
+							Even after <span>{rejectionCount}</span> attempts to say no, love
+							conquered all! 💫
 						</small>
 					)}
 				</p>
@@ -52,9 +59,20 @@ const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
 				<div className="love-letter">
 					<div className="letter-icon">💌</div>
 					<p className="letter-text">
-						"Some people are worth melting for... but you're worth{' '}
-						<span className="highlight">everything</span>! ❤️"
+						"Dear Fenshika, you're not just my Valentine,
+						<br />
+						you're my <span className="highlight">everything</span>!<br />
+						Let's make this Valentine's week unforgettable! 🌹❤️"
 					</p>
+				</div>
+
+				<div className="valentine-week-celebration">
+					<div className="week-promise">
+						<span>🌹 Roses for you everyday</span>
+						<span>🍫 Sweet moments together</span>
+						<span>🧸 Warm hugs always</span>
+						<span>💕 Infinite love forever</span>
+					</div>
 				</div>
 
 				<div className="action-buttons">
