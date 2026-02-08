@@ -15,7 +15,7 @@ const ValentineWeekBanner = ({ currentDay, onDayChange }) => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			onDayChange((prev) => (prev + 1) % valentineWeek.length);
-		}, 10000); // Changed to 10 seconds
+		}, 5000); // Changed to 5 seconds
 		return () => clearInterval(interval);
 	}, [onDayChange]);
 
