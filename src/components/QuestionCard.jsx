@@ -10,12 +10,9 @@ const QuestionCard = ({
 	onNoClick,
 }) => {
 	const noBtnRef = useRef(null);
-	const [isMobile, setIsMobile] = useState(false);
+	// Detect mobile device
+	const [isMobile] = useState(() => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-	useEffect(() => {
-		// Detect mobile device
-		setIsMobile(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-	}, []);
 
 	useEffect(() => {
 		if (isMobile || !noBtnRef.current) return;
@@ -34,18 +31,6 @@ const QuestionCard = ({
 
 			// If mouse is within 100px of the button, move it away
 			if (distance < 100) {
-				const angle = Math.atan2(e.clientY - btnCenterY, e.clientX - btnCenterX);
-				const moveDistance = 150;
-
-				let newX = btnCenterX - Math.cos(angle) * moveDistance;
-				let newY = btnCenterY - Math.sin(angle) * moveDistance;
-
-				// Keep button on screen
-				const maxX = window.innerWidth - rect.width;
-				const maxY = window.innerHeight - rect.height;
-				newX = Math.max(0, Math.min(newX, maxX));
-				newY = Math.max(0, Math.min(newY, maxY));
-
 				onNoClick(); // Trigger the position update
 			}
 		};

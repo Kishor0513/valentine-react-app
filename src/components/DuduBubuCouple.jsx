@@ -1,4 +1,4 @@
-const DuduBubuCouple = ({ mood, noClickCount }) => {
+const DuduBubuCouple = ({ noClickCount }) => {
 	const getDuduExpression = () => {
 		if (noClickCount > 7) return '😭';
 		if (noClickCount > 4) return '🥺';

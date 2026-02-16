@@ -21,19 +21,6 @@ function App() {
 	// Personalized for Fenshika 💕
 	const recipientName = 'Fenshika';
 
-	const sadMessages = [
-		'Fenshika, please... 🥺',
-		'My heart belongs to you 💔',
-		"Don't break Dudu's heart... 😢",
-		'I brought your favorite flowers... 🌹',
-		"But... we're perfect together... 😭",
-		"I'll wait for you forever... 💫",
-		'Just one chance, Fenshika? 💭',
-		"You're my only Valentine 😔",
-		"This Valentine's week without you... 💔",
-		'Please, my dear Fenshika 🙏',
-	];
-
 	const moods = [
 		'Hopeful',
 		'Nervous',
@@ -97,9 +84,10 @@ function App() {
 				body: formData,
 			});
 			console.log('Response tracked! 💕');
-		} catch (error) {
+		} catch {
 			console.log('Tracking failed, but love still succeeds! 💝');
 		}
+
 	};
 
 	const createConfetti = () => {

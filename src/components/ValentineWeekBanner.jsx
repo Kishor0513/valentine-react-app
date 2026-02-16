@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 
+const valentineWeek = [
+	{ day: 'Rose Day', date: 'Feb 7', emoji: '🌹', color: '#ff6b9d' },
+	{ day: 'Propose Day', date: 'Feb 8', emoji: '💍', color: '#ff8fab' },
+	{ day: 'Chocolate Day', date: 'Feb 9', emoji: '🍫', color: '#8B4513' },
+	{ day: 'Teddy Day', date: 'Feb 10', emoji: '🧸', color: '#DEB887' },
+	{ day: 'Promise Day', date: 'Feb 11', emoji: '🤝', color: '#FFD700' },
+	{ day: 'Hug Day', date: 'Feb 12', emoji: '🤗', color: '#FFA69E' },
+	{ day: 'Kiss Day', date: 'Feb 13', emoji: '💋', color: '#FF69B4' },
+	{ day: "Valentine's Day", date: 'Feb 14', emoji: '❤️', color: '#FF1493' },
+];
+
 const ValentineWeekBanner = ({ currentDay, onDayChange }) => {
-	const valentineWeek = [
-		{ day: 'Rose Day', date: 'Feb 7', emoji: '🌹', color: '#ff6b9d' },
-		{ day: 'Propose Day', date: 'Feb 8', emoji: '💍', color: '#ff8fab' },
-		{ day: 'Chocolate Day', date: 'Feb 9', emoji: '🍫', color: '#8B4513' },
-		{ day: 'Teddy Day', date: 'Feb 10', emoji: '🧸', color: '#DEB887' },
-		{ day: 'Promise Day', date: 'Feb 11', emoji: '🤝', color: '#FFD700' },
-		{ day: 'Hug Day', date: 'Feb 12', emoji: '🤗', color: '#FFA69E' },
-		{ day: 'Kiss Day', date: 'Feb 13', emoji: '💋', color: '#FF69B4' },
-		{ day: "Valentine's Day", date: 'Feb 14', emoji: '❤️', color: '#FF1493' },
-	];
 
 	useEffect(() => {
 		const interval = setInterval(() => {

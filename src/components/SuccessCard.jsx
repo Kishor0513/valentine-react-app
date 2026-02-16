@@ -1,4 +1,4 @@
-const SuccessCard = ({ recipientName, rejectionCount, onShare, onRestart }) => {
+const SuccessCard = ({ rejectionCount, onShare, onRestart }) => {
 	return (
 		<div className="container">
 			<div className="card success-card">
